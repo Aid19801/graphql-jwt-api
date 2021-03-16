@@ -1,11 +1,26 @@
 import React from "react";
+import { graphql } from "@apollo/client/react/hoc";
+import { gql } from "@apollo/client";
+interface HomeProps {
+  data: any;
+}
 
-interface Props {}
-
-export const Home: React.FC<Props> = () => {
+export const Home = (props: HomeProps) => {
+  console.log("data in store is like ", props);
   return (
-    <div>
-      <div>users:</div>i am home page
+    <div className="page">
+      <h1>i am home page</h1>
     </div>
   );
 };
+
+export default graphql(gql`
+  query Me {
+    me {
+      email
+    }
+  }
+`)(
+  // @ts-ignore
+  Home
+);

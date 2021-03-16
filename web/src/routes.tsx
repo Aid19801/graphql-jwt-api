@@ -9,7 +9,7 @@ import { Header } from "./Header";
 export const Routes: React.FC = () => {
   return (
     <BrowserRouter>
-      <div>
+      <div className="App">
         <Header />
         <Switch>
           <Route exact path="/" component={Home} />

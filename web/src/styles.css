@@ -5,3 +5,48 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+.App {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: start;
+}
+
+.page {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form input {
+    margin-top: 30px;
+    border: none;
+    height: 40px;
+    min-width: 270px;
+    border-radius: 12px;
+    padding: 10px;
+    background-color: rgb(232, 240, 254) !important;
+}
+
+form button {
+    margin-top: 30px;
+    border: none;
+    background-color: red;
+    padding: 10px 40px;
+    border-radius: 12px;
+    color: white;
+    font-weight: bold;
+}

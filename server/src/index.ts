@@ -1,6 +1,7 @@
 import "dotenv/config";
 import "reflect-metadata";
 import express from "express";
+import cors from "cors";
 import { ApolloServer } from "apollo-server-express";
 import { buildSchema } from "type-graphql"
 import { UserResolver } from "./UserResolver";
@@ -15,7 +16,15 @@ const PORT = 4000;
 
 (async () => {
     const app = express();
+    // Allow cors for React App on 3000
+    var corsOptions = {
+        origin: "http://localhost:3000",
+        credentials: true // <-- REQUIRED backend setting
+    }
+    app.use(cors(corsOptions));
+
     app.use(cookieParser());
+
     app.get("/", (_req, res) => {
         res.send("say hello");
     });

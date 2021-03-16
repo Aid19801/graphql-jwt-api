@@ -42,7 +42,6 @@ export const Header: React.FC<Props> = () => {
           <Link to="/bye">bye</Link>
         </div>
       </header>
-      Header Body here
     </>
   );
 };
