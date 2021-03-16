@@ -8,7 +8,7 @@ interface Props {}
 export const Login: React.FC<Props> = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [login, { data }] = useMutation(LOGIN_MUTATION);
+  const [login, { data, loading, error }] = useMutation(LOGIN_MUTATION);
 
   const handleLogin = async () => {
     try {
@@ -20,6 +20,10 @@ export const Login: React.FC<Props> = () => {
     }
     return;
   };
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
   return (
     <form
       onSubmit={async (e) => {
@@ -63,5 +67,6 @@ export const Login: React.FC<Props> = () => {
       </div>
       <button type="submit">login</button>
     </form>
+    {error && <p>{error.message}</p>}
   );
 };
