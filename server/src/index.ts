@@ -17,11 +17,12 @@ const PORT = 4000;
 (async () => {
     const app = express();
     // Allow cors for React App on 3000
-    var corsOptions = {
-        origin: "http://localhost:3000",
-        credentials: true // <-- REQUIRED backend setting
-    }
-    app.use(cors(corsOptions));
+    app.use(
+        cors({
+          origin: "http://localhost:3000",
+          credentials: true,
+        })
+    );
 
     app.use(cookieParser());
 
@@ -70,7 +71,7 @@ const PORT = 4000;
         })
     });
 
-    apolloServer.applyMiddleware({ app });
+    apolloServer.applyMiddleware({ app, cors: false });
 
     app.listen(PORT, () => {
         console.log("Express Server Started on PORT ", PORT);
