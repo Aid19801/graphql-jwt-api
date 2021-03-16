@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 import App from "./App";
+import "./styles.css";
 
 const client: any = new ApolloClient({
   uri: "http://localhost:4000/graphql",

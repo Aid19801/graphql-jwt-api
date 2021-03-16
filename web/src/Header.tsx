@@ -20,21 +20,29 @@ export const Header: React.FC<Props> = () => {
   //   }
 
   return (
-    <header>
-      <div>
-        <Link to="/">home</Link>
-      </div>
-      <div>
-        <Link to="/register">register</Link>
-      </div>
-      <div>
-        <Link to="/login">login</Link>
-      </div>
-      <div>
-        <Link to="/bye">bye</Link>
-      </div>
-      <div></div>
-      body here
-    </header>
+    <>
+      <header
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          width: "100vw",
+          justifyContent: "space-around",
+        }}
+      >
+        <div>
+          <Link to="/">home</Link>
+        </div>
+        <div>
+          <Link to="/register">register</Link>
+        </div>
+        <div>
+          <Link to="/login">login</Link>
+        </div>
+        <div>
+          <Link to="/bye">bye</Link>
+        </div>
+      </header>
+      Header Body here
+    </>
   );
 };
