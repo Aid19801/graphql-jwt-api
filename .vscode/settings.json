@@ -1,0 +1,23 @@
+{
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "workbench.colorCustomizations": {
+      "statusBarBackground": "#00EECC",
+    },
+    "workbench.colorTheme": "Abyss",
+    "editor.formatOnSave": true,
+    "[javascript]": {
+      "editor.formatOnSave": false
+    },
+    "[javascriptreact]": {
+      "editor.formatOnSave": false
+    },
+    "emmet.includeLanguages": {
+      "javascript": "javascriptreact"
+    },
+    "emmet.excludeLanguages": [
+    
+      "markdown"
+    ]
+  }
